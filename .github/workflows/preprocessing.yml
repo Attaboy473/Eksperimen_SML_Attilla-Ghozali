@@ -30,7 +30,7 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add prepocessing/Dataset_Mobile_Price_Prediction/train_preprocessed.csv
+        git add prepocessing/Dataset_Mobile_Price_Prediction/train.csv
         git commit -m "Auto update preprocessed dataset" || echo "No changes"
         git push
 
