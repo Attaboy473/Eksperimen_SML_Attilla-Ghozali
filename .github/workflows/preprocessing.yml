@@ -24,7 +24,7 @@ jobs:
 
     - name: Run preprocessing
       run: |
-        python Preprocessing/Automate_Attilla-Ghozali.py
+        python Preprocessing/automate_Attilla-Ghozali.py
 
     - name: Commit processed dataset
       run: |
