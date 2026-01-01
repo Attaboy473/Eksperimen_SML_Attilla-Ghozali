@@ -30,13 +30,15 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add prepocessing/Dataset_Mobile_Price_Prediction/train.csv
+        
+        # Sesuai dengan output_csv di script Python Anda:
+        # Script simpan di: Prepocessing/mobile_price_preprocessing/train_preprocessed.csv
+        git add Prepocessing/mobile_price_preprocessing/train_preprocessed.csv
+        
         git commit -m "Auto update preprocessed dataset" || echo "No changes"
         git push
 
-    - name: Debug folders
+    - name: Debug folders (Hanya jika error)
+      if: failure()
       run: |
-        ls
-        ls Prepocessing
-        ls Dataset_Mobile_Price_Prediction
-
+        ls -R
