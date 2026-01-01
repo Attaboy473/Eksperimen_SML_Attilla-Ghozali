@@ -33,3 +33,10 @@ jobs:
         git add preprocessing/mobile_price_preprocessing/train_preprocessed.csv
         git commit -m "Auto update preprocessed dataset" || echo "No changes"
         git push
+
+    - name: Debug folders
+      run: |
+        ls
+        ls Prepocessing
+        ls Dataset_Mobile_Price_Prediction
+
